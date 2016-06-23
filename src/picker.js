@@ -124,7 +124,6 @@ angular.module("ion-datetime-picker", ["ionic"])
 
                         $scope.bind.year = $scope.year;
                         $scope.bind.month = $scope.month.toString();
-                        console.log($scope.month);$scope.month.toString();
 
                         $scope.firstDay = new Date($scope.year, $scope.month, 1).getDay();
                         if ($scope.mondayFirst) {
@@ -144,10 +143,6 @@ angular.module("ion-datetime-picker", ["ionic"])
                         $scope.bind.second = ($scope.second < 10 ? "0" : "") + $scope.second.toString();
                         $scope.bind.meridiem = $scope.meridiem;
                     }
-                  setTimeout(function (){
-                    console.log('dziala');
-                    $scope.$apply();
-                  },2000)
                 };
 
                 var getDaysInMonth = function(year, month) {
